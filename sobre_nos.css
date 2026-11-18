@@ -1,0 +1,100 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f5f2;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #e6e2dc;
+}
+
+/* Logo */
+#logo {
+  max-width: 180px;
+  height: auto;
+}
+
+/* Texto da história */
+#historia {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+/* Destaque suave para parágrafos (opcional) */
+#historia br {
+  margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #historia {
+    margin: 20px;
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  #logo {
+    max-width: 140px;
+  }
+}
+/* Rodapé */
+footer {
+  background-color: #2f2f2f;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 60px;
+}
+
+/* Texto do rodapé */
+footer p {
+  font-size: 0.95rem;
+  margin: 6px 0;
+  opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 10px;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+button {
+  background-color: #195753;
+  border: none;
+  border-radius: 12px;
+  color: #ffffffb3;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 12px;
+  transition: background 0.3s;
+  width: 100%;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: #a8d5e8;
+  text-shadow: -1px 0px 4px 5px rgb(16, 46, 50);
+}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contactos | Pastelaria Digital</title>
+    <link rel="stylesheet" href="pastelaria_digital.css" />
+    <link rel="stylesheet" href="contactos.css" />
+  </head>
+
+  <body>
+    <header class="cabecario">
+      <div class="box_logo">
+        <a href="index.html"><img id="logo" src="logo.png" alt="logo" /></a>
+        <h1
+          style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"
+          id="empresa"
+        >
+          PASTELARIA DIGITAL
+        </h1>
+      </div>
+
+      <nav>
+        <p style="margin-left: 20px">
+          <a class="menu" href="index.html">início</a>
+        </p>
+        <p><a class="menu" href="sobre_nos.html">história</a></p>
+        <p style="margin-right: 35px">
+          <a class="menu ativo" href="contactos.html">contactos</a>
+        </p>
+      </nav>
+    </header>
+
+    <main class="contactos">
+      <h1 class="titulo">FALE CONNOSCO</h1>
+      <p class="subtitulo">
+        Encomendas, parcerias ou só para dizer olá. Respondemos em menos de 24
+        horas.
+      </p>
+
+      <section class="grelha">
+        <div class="cartao">
+          <h2>Onde estamos</h2>
+          <ul class="lista">
+            <li>
+              <span class="icone">📍</span>
+              <div>
+                <b>Morada</b><br />
+                Av. de Roma, 123, 1.º Esq.<br />
+                1700-342 Alvalade, Lisboa
+              </div>
+            </li>
+            <li>
+              <span class="icone">📞</span>
+              <div>
+                <b>Telefone</b><br />
+                <a href="tel:+351912345678">+351 912 345 678</a>
+              </div>
+            </li>
+            <li>
+              <span class="icone">✉️</span>
+              <div>
+                <b>Email</b><br />
+                <a href="mailto:ola@pastelariadigital.pt"
+                  >ola@pastelariadigital.pt</a
+                >
+              </div>
+            </li>
+            <li>
+              <span class="icone">💬</span>
+              <div>
+                <b>WhatsApp</b><br />
+                <a href="https://wa.link/btxmph">Enviar mensagem</a>
+              </div>
+            </li>
+          </ul>
+
+          <h2>Horário</h2>
+          <table class="horario">
+            <tr><td>Segunda a Sexta</td><td>08:00 – 19:00</td></tr>
+            <tr><td>Sábado</td><td>09:00 – 17:00</td></tr>
+            <tr><td>Domingo</td><td>Fechado</td></tr>
+          </table>
+
+          <h2>Redes sociais</h2>
+          <p class="redes">
+            <a href="#">Instagram</a> · <a href="#">Facebook</a> ·
+            <a href="#">TikTok</a>
+          </p>
+        </div>
+
+        <div class="cartao">
+          <h2>Envie-nos uma mensagem</h2>
+          <form id="form_contacto">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="O seu nome" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@email.com" required />
+
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto">
+              <option>Encomenda</option>
+              <option>Parceria</option>
+              <option>Sugestão</option>
+              <option>Outro</option>
+            </select>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui a sua mensagem..." required></textarea>
+
+            <button type="submit"><b>enviar mensagem</b></button>
+            <p id="resposta" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer id="sobre_nos">
+      <p>© 2026 Pastelaria Digital</p>
+      <p>Tecnologia, tradição e sustentabilidade 🍃</p>
+      <br />
+      <a style="color: rgb(179, 255, 255)" href="sobre_nos.html">
+        <p><b>historia</b></p>
+      </a>
+    </footer>
+
+    <script>
+      document
+        .getElementById("form_contacto")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          var nome = document.getElementById("nome").value;
+          document.getElementById("resposta").textContent =
+            "Obrigado, " + nome + "! Recebemos a sua mensagem e respondemos em breve.";
+          this.reset();
+        });
+    </script>
+  </body>
+</html>
